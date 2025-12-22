@@ -35,7 +35,7 @@ jobs:
             libtool
 
       - name: Install latest CMake
-          uses: cmake-js/get-cmake@v1.2.1
+        uses: cmake-js/get-cmake@v1.2.1
           with:
             version: latest
   
