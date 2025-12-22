@@ -12,7 +12,6 @@ if [ -n "${VST2_SDK_PATH}" ] ; then
   DEPS="$DEPS -DVST2_SDK_PATH=${VST2_SDK_PATH}"
 fi
 
-
 # cmake -G "Visual Studio 15 2017" -A "x64" $DEPS -B build
 # cmake -G "Visual Studio 16 2019" -A "x64" $DEPS -B build
 
@@ -20,4 +19,6 @@ rm -rf build
 mkdir build
 cd build
 cmake ..
-cmake --build .
+# cmake --build .
+# cmake -B build .
+cmake -G "Visual Studio 17 2022" -A "x64" $DEPS -B build .
