@@ -1,5 +1,7 @@
 #!/bin/sh -x
 
+echo ####################################################
+
 mkdir build
 cd build
 cmake ..
