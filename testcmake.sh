@@ -14,4 +14,4 @@ mkdir build
 cd build
 cmake ..
 # cmake --build .
-cmake -G "Visual Studio 17 2022" -A "x64" --build .
+cmake -G "Visual Studio 17 2022" -A "x64" -B .
