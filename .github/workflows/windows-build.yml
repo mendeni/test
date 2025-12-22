@@ -27,6 +27,7 @@ jobs:
             base-devel
             autoconf
             automake
+            cmake
             ninja
             gcc
             m4
