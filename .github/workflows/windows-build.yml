@@ -1,4 +1,4 @@
-name: Opus — Build on Windows
+name: Hello — Build on Windows
 
 on:
   push:
