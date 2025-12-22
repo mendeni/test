@@ -38,8 +38,7 @@ jobs:
       - name: Build
         shell: bash
         run: |
-          cmake ..
-          cmake -G "Visual Studio 17 2022" -A "x64" -B build
+          ./testcmake.sh
 
         # - name: Build
         # shell: msys2 {0}
