@@ -34,11 +34,6 @@ jobs:
             pkg-config
             libtool
 
-      - name: Install latest CMake
-        uses: cmake-js/get-cmake@v1.2.1
-        with:
-          version: latest
-  
       - name: Configure CMake
         run: cmake -G "Visual Studio 17 2022" -A x64 ... 
   
