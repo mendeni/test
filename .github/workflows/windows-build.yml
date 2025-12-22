@@ -47,5 +47,5 @@ jobs:
         with:
           name: helloi-${{ runner.os }}
           path: |
-             README.txt
+             README.md
              build/hello
