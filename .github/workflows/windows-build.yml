@@ -36,6 +36,7 @@ jobs:
             libtool
 
       - name: Configure CMake
+        shell: bash
         run: |
           cd build
           cmake ..
