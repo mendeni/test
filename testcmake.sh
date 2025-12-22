@@ -14,11 +14,11 @@ fi
 
 # cmake -G "Visual Studio 15 2017" -A "x64" $DEPS -B build
 # cmake -G "Visual Studio 16 2019" -A "x64" $DEPS -B build
-# cmake -G "Visual Studio 17 2022" -A "x64" $DEPS -B build .
+# cmake -G "Visual Studio 17 2022" -A "x64" $DEPS -B build
 
 rm -rf build
 mkdir build
 cd build
 cmake ..
 # cmake --build .
-cmake -G "Visual Studio 17 2022" -A "x64" $DEPS --build .
+cmake -G "Visual Studio 17 2022" -A "x64" $DEPS -B build .
