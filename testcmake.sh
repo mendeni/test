@@ -21,3 +21,5 @@ fi
 #cd build
 #cmake -G "Visual Studio 17 2022" -A "x64" $DEPS -B build
 #cmake --build .
+
+exit 0
