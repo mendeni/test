@@ -12,7 +12,7 @@ echo 8888888888888888888888888888888888888888888888888888888888888888
 # cmake --build .
 
 mkdir build
-# cp -v CMakeLists.txt build
+cp -v CMakeLists.txt build
 cd build
 cmake -G "Visual Studio 17 2022" -A "x64" -B ..
 cmake --build .
