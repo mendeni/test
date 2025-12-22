@@ -36,7 +36,7 @@ jobs:
             libtool
 
       - name: Configure CMake
-        shell: bash
+        shell: msys2 {0}
         run: |
           cd build
           cmake ..
