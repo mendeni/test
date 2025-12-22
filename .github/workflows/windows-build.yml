@@ -35,14 +35,14 @@ jobs:
             pkg-config
             libtool
 
-      - name: Configure CMake
+      - name: Build
         shell: msys2 {0}
         run: |
           cd build
           cmake ..
           cmake -G "Visual Studio 17 2022" -A "x64" -B build
 
-      - name: Build
+        # - name: Build
         # shell: msys2 {0}
         # run: |
         #   cmake ..
