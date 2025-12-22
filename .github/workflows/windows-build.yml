@@ -36,7 +36,7 @@ jobs:
             libtool
 
       - name: Build
-        shell: msys2 {0}
+        shell: bash
         run: |
           cd build
           cmake ..
