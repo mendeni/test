@@ -36,7 +36,6 @@ jobs:
             libtool
 
       - name: Configure CMake and run testcmake.sh
-        shell: msys2 {0}
         run: |
           cmake -G "Visual Studio 17 2022" -A "x64" -B build .
           ./testcmake.sh
