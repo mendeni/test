@@ -1,0 +1,52 @@
+name: Opus — Build on Windows
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    name: Build (Windows)
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install MSVC toolset
+        uses: ilammy/msvc-dev-cmd@v1
+          with:
+            toolset: '14.29'
+
+      - name: Setup MSYS2 and install build tools
+        uses: msys2/setup-msys2@v2
+        with:
+          msystem: MSYS          # or MSYS or MINGW32 depending on your needs
+          update: true            # run pacman -Syu (the action handles the restart dance)
+          install: >
+            base-devel
+            autoconf
+            automake
+            ninja
+            cmake
+            gcc
+            m4
+            perl
+            pkg-config
+            libtool
+
+      - name: Debug workspace & run make (MSYS2)
+        shell: msys2 {0}
+        run: |
+          ./testcmake.sh
+
+
+      - name: Upload artefacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: helloi-${{ runner.os }}
+          path: |
+             README.txt
+             build/
