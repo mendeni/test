@@ -7,9 +7,11 @@ Simply choose a unique group name (with optional password), and instantly connec
 
 Connects multiple users together to send and receive audio among all in a group, with fine-grained control over latency, quality and overall mix. Includes optional input compression, noise gate, and EQ effects, along with a master reverb. All settings are dynamic, network statistics are clearly visible.
 
-Works as a standalone application on macOS, Windows, iOS, and Linux, and as an audio plugin (AU, VST) on macOS and Windows. Use it on your desktop or in your DAW, or on your mobile device.
+Works as a standalone application on macOS, Windows, iOS, and Linux, and as an audio plugin (AU, VST) on macOS and Windows. Use it on your desktop or in your DAW.
 
 Easy to setup and use, yet still provides all the details that audio nerds want to see. Audio quality can be instantly adjusted from full uncompressed PCM (16, 24, or 32 bit) or with various compressed bitrates (16-256 kbps per channel) using the low-latency Opus codec, and you can do this independently for any of the users you are connected with in a group.
+
+The Receive Sync button    a. synchronizes streams from all remote players by measuring the receive latency from each, noting the largest value, then padding your receive jitter buffer. This will add 2ms. More about [Receive Synchronization from an Audience Perspective](images/receive-sync.png).
 
 
 <img src="images/sonobus-desktop-app.png" />
